@@ -5,7 +5,7 @@
 }
 
 html {
-    height: 100%; /* makes sure our HTML takes up 100% of the browser window */
+    height: 100%;
     font-size: 100%;
   }
 
@@ -15,9 +15,9 @@ body {
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    font-family: 'Open Sans'; /* sets our font to the "Open Sans" typeface */
-    color: white; /* sets the text color to white */
-    min-height: 100%; /* says the height of the body must be, at minimum, 100% of the window */
+    font-family: 'Open Sans';
+    color: white;
+    min-height: 100%;
     padding-bottom: 200px;
   }
 
@@ -29,7 +29,7 @@ body {
   }
 
   .navbar .logo {
-    position: relative; /* positioning will be explained in a resource */
+    position: relative; 
     left: 2rem;
     cursor: pointer;
   }
