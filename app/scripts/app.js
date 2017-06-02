@@ -17,6 +17,11 @@
              controller: 'AlbumCtrl as album',
              templateUrl: '/templates/album.html'
          })
+         .state('player_bar', {
+            url:'/player_bar',
+            controller: 'PlayerBarCtrl as player_bar',
+            templateUrl: '/templates/player_bar.html'
+         })
          .state('collection', {
              url: '/collection',
              controller: 'CollectionCtrl as collection',
