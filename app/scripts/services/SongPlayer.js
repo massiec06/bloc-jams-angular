@@ -86,6 +86,15 @@
          *@param {Object} song
          **/
 
+         SongPlayer.volume = 50;
+
+         SongPlayer.setVolume = function (newValue) {
+           if(currentBuzzObject) {
+             currentBuzzObject.setVolume(newValue);
+             SongPlayer.volume = newValue;
+           }
+         };
+
           SongPlayer.play = function(song) {
               song = song || SongPlayer.currentSong;
               if (SongPlayer.currentSong !== song) {
@@ -137,17 +146,6 @@
 
         SongPlayer.next = function () {
 
-          /**
-          * @function setCurrentTime
-          * @desc Set current time (in seconds) of currently playing song
-          * @param {Number} time
-          */
-           SongPlayer.setCurrentTime = function(time) {
-               if (currentBuzzObject) {
-                   currentBuzzObject.setTime(time);
-               }
-           };
-
           var currentSongIndex = getSongIndex(SongPlayer.currentSong);
           currentSongIndex++;
 
@@ -160,7 +158,18 @@
           }
         };
 
-          return SongPlayer;
+        /**
+        * @function setCurrentTime
+        * @desc Set current time (in seconds) of currently playing song
+        * @param {Number} time
+        */
+         SongPlayer.setCurrentTime = function(time) {
+             if (currentBuzzObject) {
+                 currentBuzzObject.setTime(time);
+             }
+         };
+
+        return SongPlayer;
      }
 
      angular
